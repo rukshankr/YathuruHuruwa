@@ -134,7 +134,7 @@ function App() {
           <span>{incomingChars.substr(0, 20)}</span>
         </h1>
         <sub className="quote">
-        -සූත්‍රාන්තපිටකයෙහි,මජ්ඣිම නිකායේ,මැඳුම් සඟියෙහි,මූලපණ්ණාසකයේ,පලමු වැනි මූලපරියාය වර්ගයේ,වත්‍ථූපම සූත්‍රය
+        -නිර්මාපක :- රුක්‍ෂාන් කරන්නාගොඩ
         </sub>
       <div class="keyboard">
   <div className="keyboard__row keyboard__row--h1">
