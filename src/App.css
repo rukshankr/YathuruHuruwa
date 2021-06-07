@@ -9,6 +9,9 @@
   justify-content: center;
   font-size: calc(50px + 2vmin);
   color: rgb(245, 115, 115);
+  padding-top: -50px;
+  margin-top: -4px;
+  margin-bottom: -4px;
 }
 
 .Character {
@@ -24,9 +27,12 @@
 }
 
 .quote{
+  
   position: relative;
   margin-left: 100px;
   padding-left: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: silver;
 }
 
@@ -189,4 +195,12 @@ h1 {
   background-color: #fd7a00;
   color: #fff;
   font-size: large;
+  border-radius: 15%;
 }
+
+.level-button:hover{
+  background-color: #ffcfa2;
+  color: #222;
+  border-radius: 15%;
+}
+

@@ -5,7 +5,7 @@ import useKeyPress from "./hooks/useKeyPress";
 import { currentTime } from "./utils/time";
 
 
-var level = "b";
+var level = 0;
 const initialWords = generate(level);
 
 
@@ -105,6 +105,7 @@ function App() {
       //6
       updatedIncomingChars = incomingChars.substring(1);
       if (updatedIncomingChars.split(" ").length < 10) {
+        console.log("get new from: "+level);
         updatedIncomingChars += " " + generate(level);
       }
       setIncomingChars(updatedIncomingChars);
@@ -122,10 +123,14 @@ function App() {
   });
   return (
     <div className="App">
-      <header>
         <h1 className="App-header">සිංහල යතුරු හුරුව</h1>
-      </header>
-        <button className="level-button" onClick={() => {level = (level === "b")? "f" : (level === "f")? "m" : "a";}}>ඊළඟ වටයට යෑමට මෙම බොත්තම එක් වරක් තද කර වෙන තැනක ක්ලික් කරන්න</button>
+        <sub className="quote">
+        -නිර්මාපක :- රුක්‍ෂාන් කරන්නාගොඩ
+        </sub>
+        <div>
+          <br></br>
+        <button className="level-button" onClick={() => { level = (level+1)%5; console.log(level); }}>ඊළඟ වටය</button>
+        </div>
       <h1 className="Character">
           <span className="Character-out">
             {(leftPadding + outgoingChars).slice(-20)}
@@ -133,9 +138,7 @@ function App() {
           <span className="Character-current">{currentChar}</span>
           <span>{incomingChars.substr(0, 20)}</span>
         </h1>
-        <sub className="quote">
-        -නිර්මාපක :- රුක්‍ෂාන් කරන්නාගොඩ
-        </sub>
+        
       <div class="keyboard">
   <div className="keyboard__row keyboard__row--h1">
     <div data-key="27" class="key--word">
